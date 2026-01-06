@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.0 on win32)" generated="2026-01-06T14:18:08.676986" rpa="false" schemaversion="5">
+<suite id="s1" name="Testdemo6" source="C:\Users\AIFA USER 77\PycharmProjects\PythonProject1\testcases\Testdemo6.robot">
+<test id="s1-t1" name="Validate unsuccessful login" line="26">
+<kw name="open the browser url" owner="resource" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-06T14:18:08.999467" level="INFO">Opening browser 'Edge' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-06T14:18:08.999232" elapsed="4.361808"/>
+</kw>
+<status status="PASS" start="2026-01-06T14:18:08.998513" elapsed="4.362679"/>
+</kw>
+<kw name="Fill the form" owner="LandingPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-06T14:18:13.362607" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-06T14:18:13.362158" elapsed="0.135096"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-06T14:18:13.497783" level="INFO">Typing text '12345' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-06T14:18:13.497533" elapsed="0.130972"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-06T14:18:13.628871" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-06T14:18:13.628686" elapsed="0.130245"/>
+</kw>
+<arg>${user_name}</arg>
+<arg>${invalid}</arg>
+<status status="PASS" start="2026-01-06T14:18:13.361668" elapsed="0.397449"/>
+</kw>
+<kw name="wait until Element is located in the page" owner="LandingPage">
+<kw name="Wait Until element passed is located on Page" owner="resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${page_locator}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-06T14:18:13.761399" elapsed="2.056251"/>
+</kw>
+<arg>${Error_Message_Login}</arg>
+<status status="PASS" start="2026-01-06T14:18:13.760842" elapsed="2.057008"/>
+</kw>
+<status status="PASS" start="2026-01-06T14:18:13.760282" elapsed="2.057702"/>
+</kw>
+<kw name="Verify error message is correct" owner="LandingPage">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-06T14:18:15.861729" level="INFO">${result} = Incorrect username/password.</msg>
+<var>${result}</var>
+<arg>${error_message}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-06T14:18:15.818979" elapsed="0.042831"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-01-06T14:18:15.862163" elapsed="0.000758"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-01-06T14:18:15.863193" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg time="2026-01-06T14:18:15.864730" level="INFO">Verifying element 'css:.alert-danger.col-md-12' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${error_message}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-01-06T14:18:15.863272" elapsed="0.029728"/>
+</kw>
+<status status="PASS" start="2026-01-06T14:18:15.818523" elapsed="0.074709"/>
+</kw>
+<kw name="close browser sessions" owner="resource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-06T14:18:15.894249" elapsed="2.198068"/>
+</kw>
+<status status="PASS" start="2026-01-06T14:18:15.893863" elapsed="2.198649"/>
+</kw>
+<tag>Regression</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2026-01-06T14:18:08.997761" elapsed="9.095188"/>
+</test>
+<doc>Validate login and checkout cards</doc>
+<status status="PASS" start="2026-01-06T14:18:08.678809" elapsed="9.415856"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Regression</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat name="Testdemo6" id="s1" pass="1" fail="0" skip="0">Testdemo6</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-06T14:18:15.863193" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+</errors>
+</robot>

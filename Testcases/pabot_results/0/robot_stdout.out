@@ -1,0 +1,9 @@
+==============================================================================
+Testdemo6 :: Validate login and checkout cards                                
+==============================================================================
+Validate unsuccessful login                                           | PASS |
+------------------------------------------------------------------------------
+Testdemo6 :: Validate login and checkout cards                        | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\AIFA USER 77\PycharmProjects\PythonProject1\Testcases\pabot_results\0\output.xml
